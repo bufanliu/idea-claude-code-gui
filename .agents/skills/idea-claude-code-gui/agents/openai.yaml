@@ -1,0 +1,6 @@
+interface:
+  display_name: "Idea Claude Code Gui"
+  short_description: "Repo-specific patterns and workflows for idea-claude-code-gui"
+  default_prompt: "Use the idea-claude-code-gui repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
