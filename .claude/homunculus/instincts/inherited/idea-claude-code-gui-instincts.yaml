@@ -1,0 +1,392 @@
+# Instincts generated from https://github.com/bufanliu/idea-claude-code-gui
+# Generated: 2026-03-16T10:01:22.207Z
+# Version: 2.0
+
+---
+id: idea-claude-code-gui-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 60 chars
+- Based on 200 commits
+
+---
+id: idea-claude-code-gui-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: idea-claude-code-gui-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: idea-claude-code-gui-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: idea-claude-code-gui-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: main, test
+
+---
+id: idea-claude-code-gui-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.ts
+
+---
+id: idea-claude-code-gui-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: idea-claude-code-gui-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: webview/src/components/settings/codexprovidersection/*, webview/src/components/settings/providerlist/*, webview/src/components/toolblocks/*
+
+---
+id: idea-claude-code-gui-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: idea-claude-code-gui-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: src/**/*
+
+---
+id: idea-claude-code-gui-workflow-release-version-bump-and-changelog
+trigger: "when doing release version bump and changelog"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Release Version Bump And Changelog
+
+## Action
+
+Follow the release-version-bump-and-changelog workflow:
+1. Update version number in build.gradle
+2. Update CHANGELOG.md with new release notes
+3. Update webview/src/version/changelog.ts
+4. Update README.md and README.zh-CN.md with new version info
+5. Update or add sponsor and logo images if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: build.gradle, CHANGELOG.md, webview/src/version/changelog.ts
+
+---
+id: idea-claude-code-gui-workflow-feature-release-merge
+trigger: "when doing feature release merge"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Feature Release Merge
+
+## Action
+
+Follow the feature-release-merge workflow:
+1. Merge feature branch into main
+2. Update core backend Java files
+3. Update ai-bridge service files
+4. Update webview frontend components and hooks
+5. Update i18n locale files
+6. Update assets (images/icons)
+7. Update changelog and documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/java/com/github/claudecodegui/**/*.java, ai-bridge/**/*.js, webview/src/components/**/*.tsx
+
+---
+id: idea-claude-code-gui-workflow-large-module-refactor-split
+trigger: "when doing large module refactor split"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Large Module Refactor Split
+
+## Action
+
+Follow the large-module-refactor-split workflow:
+1. Identify large modules (e.g., Handler.java, App.tsx)
+2. Extract related logic into new focused files
+3. Update imports and usage throughout the codebase
+4. Add or update related tests
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/java/com/github/claudecodegui/handler/*.java, src/main/java/com/github/claudecodegui/provider/claude/*.java, webview/src/hooks/*.ts
+
+---
+id: idea-claude-code-gui-workflow-add-or-update-i18n-keys
+trigger: "when doing add or update i18n keys"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Add Or Update I18n Keys
+
+## Action
+
+Follow the add-or-update-i18n-keys workflow:
+1. Add new keys to webview/src/i18n/locales/en.json
+2. Propagate new keys to all other locale files (es.json, fr.json, hi.json, ja.json, ru.json, zh-TW.json, zh.json)
+3. Update UI components to use the new i18n keys
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: webview/src/i18n/locales/en.json, webview/src/i18n/locales/es.json, webview/src/i18n/locales/fr.json
+
+---
+id: idea-claude-code-gui-workflow-fix-provider-or-model-switch
+trigger: "when doing fix provider or model switch"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Fix Provider Or Model Switch
+
+## Action
+
+Follow the fix-provider-or-model-switch workflow:
+1. Update backend Java service and settings files to fix provider/model logic
+2. Update frontend hooks and components (e.g., useModelProviderState, ModelSelect.tsx)
+3. Add or update related tests
+4. Update utility modules if model mapping is involved
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/java/com/github/claudecodegui/settings/ProviderManager.java, src/main/java/com/github/claudecodegui/CodemossSettingsService.java, src/main/java/com/github/claudecodegui/ClaudeSession.java
+
+---
+id: idea-claude-code-gui-workflow-fix-codex-mcp-server-status
+trigger: "when doing fix codex mcp server status"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Fix Codex Mcp Server Status
+
+## Action
+
+Follow the fix-codex-mcp-server-status workflow:
+1. Update src/main/java/com/github/claudecodegui/settings/CodexMcpServerManager.java to fix status logic
+2. Test and verify the fix
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/java/com/github/claudecodegui/settings/CodexMcpServerManager.java
+
+---
+id: idea-claude-code-gui-workflow-update-community-section-or-assets
+trigger: "when doing update community section or assets"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/bufanliu/idea-claude-code-gui
+---
+
+# Idea Claude Code Gui Workflow Update Community Section Or Assets
+
+## Action
+
+Follow the update-community-section-or-assets workflow:
+1. Update webview/src/components/settings/CommunitySection/index.tsx
+2. Update or replace images in webview/src/assets/images/
+3. Update i18n locale files for new/changed text
+4. Update style files if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: webview/src/components/settings/CommunitySection/index.tsx, webview/src/assets/images/wxq.png, webview/src/components/settings/CommunitySection/style.module.less
+
